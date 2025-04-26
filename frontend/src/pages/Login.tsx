@@ -1,11 +1,21 @@
+import { useNavigate } from "react-router-dom";
 import { FaEnvelope, FaLock } from "react-icons/fa";
+
+import { client } from "../client";
 import styles from "../css/Login.module.css";
-import { Link } from "react-router-dom";
 
 function Login() {
-  const FRONTEND_URL = "http://localhost:5173";
-  function handleSubmit() {
-    console.log("Submit");
+  const navigate = useNavigate();
+
+  function handleLogin() {
+    const doc = {
+      _id: "adjkvdk",
+      _type: "user",
+      userName: "sejhfeh",
+      image: "dhfvdj",
+    };
+
+    client.createIfNotExists(doc).then(() => navigate("/"));
   }
   return (
     <>
@@ -17,7 +27,7 @@ function Login() {
               Welcome Back, Please Login !!!
             </p>
           </div>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleLogin}>
             {/* Email */}
             <div className="mb-3">
               <label
@@ -59,7 +69,7 @@ function Login() {
               </div>
             </div>
             <button type="submit" className="btn btn-danger w-100 fw-bold y-2">
-              Submit
+              Login
             </button>
           </form>
           <p className="text-muted text-center mt-3">Dont't have an Account</p>
