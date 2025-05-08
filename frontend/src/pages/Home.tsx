@@ -3,6 +3,7 @@ import { HiMenu } from "react-icons/hi";
 import { IoCloseSharp } from "react-icons/io5";
 
 import Sidebar from "../components/Sidebar";
+import Pin from "./Pin";
 
 function Home() {
   const user = {
@@ -33,6 +34,7 @@ function Home() {
           </div>
         )}
       </div>
+      <Pin />
     </>
   );
 }
