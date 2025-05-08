@@ -1,0 +1,7 @@
+.sidebarHidden {
+  transform: translateX(-100%);
+}
+
+.sidebar-visible {
+  transform: translateX(0);
+}
