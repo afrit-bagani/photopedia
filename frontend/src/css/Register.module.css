@@ -1,0 +1,9 @@
+.formContainer {
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.formContainer:hover {
+  box-shadow: 0px 12px 33px rgba(0, 0, 0, 0.15);
+}
